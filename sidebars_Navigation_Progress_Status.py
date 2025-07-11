@@ -87,14 +87,17 @@ if rad == "Progress Bar":
 
             if percent_complete == 25:
                 status_text.info("🕹️ Loading Assets...")
+                time.sleep(0.2)
             elif percent_complete == 50:
                 status_text.info("⚙️ Optimizing...")
+                time.sleep(0.2)
             elif percent_complete == 75:
                 status_text.info("✨ Almost Ready...")
+                time.sleep(0.2)
 
         status_text.success("✅ Done! Ready to go!")
         st.balloons()
 
-        # ✅ Reset progress bar to 0
+        # Reset progress bar to 0
         time.sleep(1)  # Optional pause before reset
         progress.progress(0, text="Progress reset.")
